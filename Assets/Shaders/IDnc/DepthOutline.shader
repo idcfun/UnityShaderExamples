@@ -2,11 +2,8 @@
 {
 	Properties{
 		_MainTex("MainTex",2D) = "white"{}
-		_RimFactor("RimFactor",Range(0.0,5.0))=1.0
-		_DistanceFactor("DistanceFactor",Range(0.0,10.0))=1.0
 		_RimColor("RimColor",Color)=(1,0,0,1)
-		_DistanceFactor2("DistanceFactor2",Range(0.0,10.0))=1.0
-		_DistanceFactor3("DistanceFactor3",Range(0.0,5.0)) = 1.0
+		_Color("Color",Color)=(1,1,1,1)
 	}
 		SubShader{
 			Tags{"Queue" = "Transparent" "RenderType" = "Transparent" "IgnoreProjector"="true"}
@@ -22,12 +19,8 @@
 				sampler2D _MainTex;
 				float4 _MainTex_ST;
 				sampler2D _CameraDepthTexture;
-				sampler2D _CameraDepthTextureA;
-				float _RimFactor;
-				float _DistanceFactor;
+				float4 _Color;
 				float4 _RimColor;
-				float _DistanceFactor2;
-				float _DistanceFactor3;
 				
 				struct a2v {
 					float4 vertex:POSITION;
@@ -70,16 +63,12 @@
 						distance = 0;
 					}
 
-					float3 col;
-					if(distance > 0.0){
+					if(distance > 0.0)
+					{
 						return _RimColor;
 					}
-					else
-					{
-						col = float3(0.0,0.0,0.0);
-					}
 
-					return float4(mainTex.rgb+col, 0.3);
+					return float4(mainTex, _Color.w);
 				}
 
 				ENDCG

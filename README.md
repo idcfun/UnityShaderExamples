@@ -1,5 +1,6 @@
 # ShaderExamples
-准备在这个仓库中持续的更新Unity Shader相关的Example
+Prepare to continuously update Unity Shader-related Examples in this warehouse
+
 ## 1. DepthOutline
 类似于吃鸡游戏中的毒圈效果，毒圈需要和建筑物，地形有一个相交线的效果.
 ### 效果

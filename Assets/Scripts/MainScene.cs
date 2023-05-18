@@ -7,9 +7,14 @@ using UnityEngine.SceneManagement;
 public class MainScene : MonoBehaviour {
 	private void OnGUI()
     {
-        if (GUILayout.Button("Load Depth Outline Scene"))
+        if (GUILayout.Button("DepthOutline"))
 		{
 			SceneManager.LoadScene("DepthOutlineScene");
+		}
+
+		if (GUILayout.Button("BumpScene"))
+		{
+			SceneManager.LoadScene("BumpScene");
 		}
 	}
 }

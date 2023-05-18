@@ -2,6 +2,6 @@
 Prepare to continuously update Unity Shader-related Examples in this warehouse
 
 ## 1. DepthOutline
-类似于吃鸡游戏中的毒圈效果，毒圈需要和建筑物，地形有一个相交线的效果.
-### 效果
+Similar to the poison circle effect in the game of PUBG, the poison circle needs to have an intersecting line effect with buildings and terrain.
+### Display Effect
   <img style="width:800px;height:480px;" src="https://github.com/idncfun/ShaderExamples/assets/6869684/28d9ad6b-3cfc-4da0-bb85-1efeda317741">
